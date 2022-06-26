@@ -10,6 +10,7 @@ Question 1
 
 
 Complete definitions for key Git & GitHub terminology
+
 GIT WORKFLOW FUNDAMENTALS: 
 Working Directory, Staging Area, Local Repo (head), Remote repo (master).
  
