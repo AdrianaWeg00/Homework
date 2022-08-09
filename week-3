@@ -1,0 +1,28 @@
+from collections import Counter
+
+
+def generate_phrase(characters, phrase):
+    if len(characters) < len(phrase):
+        print("You cannot form your phrase with the given characters")
+        exit()
+    characters_dictionary = Counter(characters)
+    phrase_dictionary = Counter(phrase)
+    can_create = False
+
+    for phrase_key in phrase_dictionary:
+        if phrase_key in characters_dictionary and characters_dictionary[phrase_key] >= phrase_dictionary[phrase_key]:
+            can_create = True
+        else:
+            can_create = False
+            break
+
+    if can_create:
+        return 'You can form this sentence with the provided characters'
+    else:
+        return 'You cannot create the sentence.'
+
+
+characters = input("Write the characters you want to use: ")
+phrase = input("Write your sentence: ")
+
+print(generate_phrase(characters, phrase))
